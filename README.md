@@ -1,10 +1,3 @@
-# How to use this ?
-
-## Clone this using 😚:
-```bash
-https://github.com/ayushgptaa/Next-template.git
-```
-
 ## Install dependencies ⚙️:
 
 ```bash
