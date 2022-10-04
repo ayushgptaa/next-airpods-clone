@@ -4,15 +4,15 @@ import styles from "./index.module.scss"
 
 const Hero = () => {
     return (
-        <main>
-            <section className={styles.rootContainer}>
-                <picture className={styles.heroImg}>
-                    <Image src="/images/Hero/Hero.png" alt="Airpods Max" fill />
-                </picture>
-                {/* <picture className={styles.heroTextImg} style={{zIndex: -9}}>
-                    <Image src="/images/Hero/Herotext.jpeg" alt="Airpods" fill />
-                </picture> */}
-            </section>
+        <main className={styles.rootContainer}>
+            <div className={styles.heroImg}>
+                <Image src="/images/Hero/Hero.png" alt="Airpods Max" fill priority />
+            </div>
+
+            <div className={styles.heroTextImg} style={{zIndex: -9}}>
+                <Image src="/images/Hero/Herotext.jpeg" alt="Airpods" fill />
+            </div>
+
             <p>
                 Introducing AirPods Max — a perfect balance of exhilarating high-fidelity audio and the effortless magic
                 of AirPods. The ultimate personal listening experience is here.

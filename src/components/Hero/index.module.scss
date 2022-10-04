@@ -1,0 +1,30 @@
+@use "@styles/variables.scss";
+
+.rootContainer {
+    position: relative;
+    height: calc(100vh - variables.$nav);
+    width: 100%;
+
+    p {
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 600;
+        max-width: 80%;
+        margin: auto;
+        margin: 1.5rem auto 0;
+    }
+}
+
+.heroImg {
+    position: relative;
+    width: 350px;
+    aspect-ratio: 828/919;
+    margin: 9rem auto 3.5rem;
+}
+
+.heroTextImg {
+    position: relative;
+    width: 288px;
+    aspect-ratio: 36/5;
+    margin: auto;
+}
