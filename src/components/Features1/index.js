@@ -3,8 +3,9 @@ import styles from "./index.module.scss"
 const data = [
     {
         id: 0,
-        srcSet: "/images/Features1/design_foam_small.jpg",
-        src: "/images/Features1/design_foam_large.jpg",
+
+        srcSet: "/images/Features1/design_mesh_small.jpg",
+        src: "/images/Features1/design_mesh_large.jpg",
         text: (
             <p>
                 A <span className={styles.span}> custom-designed mesh textile </span> wraps the ear cushions to provide
@@ -15,8 +16,8 @@ const data = [
     },
     {
         id: 1,
-        srcSet: "/images/Features1/design_mesh_small.jpg",
-        src: "/images/Features1/design_mesh_large.jpg",
+        srcSet: "/images/Features1/design_foam_small.jpg",
+        src: "/images/Features1/design_foam_large.jpg",
         text: (
             <p>
                 Crafted with acoustically engineered memory foam, the{" "}
