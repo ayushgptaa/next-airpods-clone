@@ -1,5 +1,14 @@
+@use "/styles/mixins.scss";
+
 .rootContainer {
     padding: 3rem 0;
+
+    p {
+        font-size: 17px;
+        line-height: 1.23536;
+        font-weight: 600;
+        letter-spacing: -0.011em;
+    }
 }
 
 .heroImg {
@@ -13,18 +22,43 @@
 
     p {
         margin-top: 1.5rem;
-        font-size: 17px;
-        line-height: 1.23536;
-        font-weight: 600;
-        letter-spacing: -0.011em;
         color: #86868b;
-    }
 
-    span {
-        color: #000;
+        span {
+            color: #000;
+        }
     }
 }
 
 .singleFeature {
     padding-bottom: 3rem;
+}
+
+.crownVideoWrapper {
+    position: relative;
+    margin-top: 3rem;
+
+    p {
+        position: absolute;
+        bottom: 4.5rem;
+        @include mixins.horizontal-center;
+        width: 280px;
+        color: #d1e8fd;
+
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.crownVideo {
+    position: absolute;
+    width: 160%;
+    @include mixins.horizontal-center;
+}
+
+.crownBody {
+    position: relative;
+    width: 160%;
+    @include mixins.horizontal-center;
 }

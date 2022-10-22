@@ -55,6 +55,25 @@ const Features = () => {
                     </div>
                 ))}
             </div>
+
+            <div className={styles.crownVideoWrapper}>
+                <video muted playsInline autoPlay loop preload="none" className={styles.crownVideo}>
+                    <source src="/videos/Features1/crown_video_small.mp4" media="(max-width:768px)" />
+                    <source src="/videos/Features1/crown_video_large.mp4" media="(min-width:0px)" />
+                </video>
+                <picture className={styles.crownBody}>
+                    <source srcSet="/images/Features1/design_crown_body_small.png" media="(max-width:768px)" />
+                    <img
+                        src="/images/Features1/images/Features1/design_crown_body_large.png"
+                        alt="Image shows detail of digital crown in sky blue"
+                        loading="lazy"
+                    />
+                </picture>
+                <p>
+                    The <span>Digital Crown</span> lets you precisely control volume, skip between tracks, answer phone
+                    calls and activate Siri
+                </p>
+            </div>
         </section>
     )
 }

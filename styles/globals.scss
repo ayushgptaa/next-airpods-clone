@@ -15,6 +15,7 @@ html {
     scroll-behavior: smooth;
     width: 100vw;
     height: 1000vh;
+    overflow-x: hidden;
 }
 
 a {
@@ -37,4 +38,8 @@ img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+picture {
+    display: inline-block;
 }
