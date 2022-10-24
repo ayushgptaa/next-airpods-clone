@@ -1,3 +1,7 @@
+import {useState} from "react"
+
+import PausePlayBtn from "../Icons/PausePlayBtn"
+
 import styles from "./index.module.scss"
 
 const data = [
@@ -41,6 +45,14 @@ const SingleFeature = ({srcSet, src, text, alt}) => (
 )
 
 const Features = () => {
+    const [pause, setPause] = useState(false)
+
+    const pauseplayVideo = () => {
+        const video = document.getElementById("video")
+        pause ? video.play() : video.pause()
+        setPause(!pause)
+    }
+
     return (
         <section className={styles.rootContainer}>
             <picture className={styles.heroImg}>
@@ -57,7 +69,7 @@ const Features = () => {
             </div>
 
             <div className={styles.crownVideoWrapper}>
-                <video muted playsInline autoPlay loop preload="none" className={styles.crownVideo}>
+                <video muted playsInline autoPlay loop preload="none" className={styles.crownVideo} id="video">
                     <source src="/videos/Features1/crown_video_small.mp4" media="(max-width:768px)" />
                     <source src="/videos/Features1/crown_video_large.mp4" media="(min-width:0px)" />
                 </video>
@@ -73,6 +85,10 @@ const Features = () => {
                     The <span>Digital Crown</span> lets you precisely control volume, skip between tracks, answer phone
                     calls and activate Siri
                 </p>
+
+                <button className={styles.pauseplayBtn} onClick={() => pauseplayVideo()}>
+                    <PausePlayBtn pause={pause} />
+                </button>
             </div>
         </section>
     )
