@@ -64,7 +64,7 @@ const Features = () => {
                 <picture className={styles.crownBody}>
                     <source srcSet="/images/Features1/design_crown_body_small.png" media="(max-width:768px)" />
                     <img
-                        src="/images/Features1/images/Features1/design_crown_body_large.png"
+                        src="/images/Features1/design_crown_body_large.png"
                         alt="Image shows detail of digital crown in sky blue"
                         loading="lazy"
                     />

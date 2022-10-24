@@ -2,6 +2,7 @@
 
 .rootContainer {
     padding: 3rem 0;
+    overflow-x: hidden;
 
     p {
         font-size: 17px;
@@ -13,7 +14,7 @@
 
 .heroImg {
     display: inline-block;
-    height: 100vh;
+    height: 650px;
     width: 100vw;
 }
 
