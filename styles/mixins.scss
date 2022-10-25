@@ -2,3 +2,9 @@
     translate: -50%;
     left: 50%;
 }
+
+@mixin flex-vertical-center($justify-content) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+}
