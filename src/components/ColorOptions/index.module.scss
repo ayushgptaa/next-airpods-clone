@@ -1,0 +1,57 @@
+@use "/styles/mixins.scss";
+
+.rootContainer {
+    padding: 80px 30px 0;
+    overflow: hidden;
+}
+
+.heading {
+    h3 {
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: 0em;
+    }
+}
+
+.colorTabWrapper {
+    @include mixins.flex-vertical-center(flex-start);
+    margin-top: 1rem;
+}
+
+.colorTab {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 10px;
+
+    & > span {
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        bottom: 0;
+    }
+}
+
+.productGallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
+
+    div {
+        width: 50%;
+        position: relative;
+        height: 350px;
+
+        img {
+            position: absolute;
+            transition: opacity 0.4s ease-in-out;
+            inset: 0;
+            opacity: 0;
+            will-change: z-index, opacity;
+        }
+    }
+}
