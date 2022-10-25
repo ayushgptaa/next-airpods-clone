@@ -8,54 +8,51 @@ const colors = [
         secondary: "#d2d3d4",
         color: "silver",
     },
-
     {
         primary: "#3c3d3a",
         secondary: "#595759",
         color: "gray",
     },
-]
-
-const frontImages = [
     {
-        img: `/images/ColorOptions/design_colors_silver_front_small.jpg`,
-        color: "silver",
+        primary: "#2f506c",
+        secondary: "#91a6bb",
+        color: "blue",
     },
     {
-        img: `/images/ColorOptions/design_colors_gray_front_small.jpg`,
-        color: "gray",
-    },
-]
-
-const sideImages = [
-    {
-        img: `/images/ColorOptions/design_colors_silver_side_small.jpg`,
-        color: "silver",
+        primary: "#e4544d",
+        secondary: "#d8a097",
+        color: "pink",
     },
     {
-        img: `/images/ColorOptions/design_colors_gray_side_small.jpg`,
-        color: "gray",
+        primary: "#e7ece3",
+        secondary: "#afbfab",
+        color: "green",
     },
 ]
 
-const ColorTabs = ({primary, secondary, color, setColor}) => (
-    <li
-        className={styles.colorTab}
-        style={{backgroundColor: primary}}
-        onClick={() => {
-            setColor(color)
-        }}>
-        <span style={{backgroundColor: secondary}} />
-    </li>
+const ColorTabs = ({setColor}) => (
+    <ul className={styles.colorTabWrapper}>
+        {colors.map(({primary, secondary, color}) => (
+            <li
+                className={styles.colorTab}
+                style={{backgroundColor: primary}}
+                onClick={() => {
+                    setColor(color)
+                }}
+                key={color}>
+                <span style={{backgroundColor: secondary}} />
+            </li>
+        ))}
+    </ul>
 )
 
 const ProductImages = ({currColor}) => {
     return (
         <div className={styles.productGallery}>
             <div>
-                {frontImages.map(({img, color}) => (
+                {colors.map(({color}) => (
                     <img
-                        src={img}
+                        src={`/images/ColorOptions/design_colors_${color}_front_small.jpg`}
                         alt="iphone-12-pro-max"
                         style={{zIndex: color === currColor ? 1 : -1, opacity: color === currColor ? 1 : 0}}
                         key={color}
@@ -63,9 +60,9 @@ const ProductImages = ({currColor}) => {
                 ))}
             </div>
             <div>
-                {sideImages.map(({img, color}) => (
+                {colors.map(({color}) => (
                     <img
-                        src={img}
+                        src={`/images/ColorOptions/design_colors_${color}_side_small.jpg`}
                         alt="iphone-12-pro-max"
                         style={{zIndex: color === currColor ? 1 : -1, opacity: color === currColor ? 1 : 0}}
                         key={color}
@@ -86,12 +83,7 @@ const ColorOptions = () => {
                 <h3>Anything but monotone.</h3>
             </div>
 
-            <ul className={styles.colorTabWrapper}>
-                {colors.map(({primary, secondary, color}) => (
-                    <ColorTabs primary={primary} secondary={secondary} color={color} setColor={setColor} />
-                ))}
-            </ul>
-
+            <ColorTabs setColor={setColor} />
             <ProductImages currColor={color} />
         </section>
     )
